@@ -1,0 +1,54 @@
+2025-09-09 00:37:28.450 -07:00 [INF] HTTP GET /api/v1/Auth/me responded 401 in 2.9000 ms
+2025-09-09 00:39:12.405 -07:00 [INF] Login attempt for email: admin@test.com
+2025-09-09 00:39:12.451 -07:00 [INF] Processing login request for email: admin@test.com
+2025-09-09 00:39:12.467 -07:00 [WRN] Login failed for email: admin@test.com. Reason: Invalid credentials
+2025-09-09 00:39:12.467 -07:00 [WRN] Login failed for email: admin@test.com
+2025-09-09 00:39:12.468 -07:00 [INF] HTTP POST /api/v1/Auth/login responded 401 in 69.6724 ms
+2025-09-09 00:50:12.134 -07:00 [INF] Login attempt for email: admin@test.com
+2025-09-09 00:50:12.135 -07:00 [INF] Processing login request for email: admin@test.com
+2025-09-09 00:50:12.165 -07:00 [WRN] Login failed for email: admin@test.com. Reason: Invalid credentials
+2025-09-09 00:50:12.165 -07:00 [WRN] Login failed for email: admin@test.com
+2025-09-09 00:50:12.165 -07:00 [INF] HTTP POST /api/v1/Auth/login responded 401 in 32.5849 ms
+2025-09-09 00:55:15.195 -07:00 [INF] Login attempt for email: admin@test.com
+2025-09-09 00:55:15.198 -07:00 [INF] Processing login request for email: admin@test.com
+2025-09-09 00:55:15.237 -07:00 [WRN] Login failed for email: admin@test.com. Reason: Invalid credentials
+2025-09-09 00:55:15.237 -07:00 [WRN] Login failed for email: admin@test.com
+2025-09-09 00:55:15.237 -07:00 [INF] HTTP POST /api/v1/Auth/login responded 401 in 43.0775 ms
+2025-09-09 00:56:15.010 -07:00 [INF] Login attempt for email: admin@test.com
+2025-09-09 00:56:15.011 -07:00 [INF] Processing login request for email: admin@test.com
+2025-09-09 00:56:15.042 -07:00 [INF] Login successful for email: admin@test.com
+2025-09-09 00:56:15.046 -07:00 [ERR] Error processing login request for email: admin@test.com
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+User -> UserDto
+EMR.Core.Entities.User -> EMR.Application.Commands.Authentication.UserDto
+   at lambda_method1016(Closure, Object, UserDto, ResolutionContext)
+   at EMR.Application.Commands.Authentication.LoginCommandHandler.Handle(LoginCommand request, CancellationToken cancellationToken) in /Users/dang/dev/modern-emr/services/emr-backend/src/EMR.Application/Commands/Authentication/LoginCommandHandler.cs:line 44
+2025-09-09 00:56:15.051 -07:00 [WRN] Login failed for email: admin@test.com
+2025-09-09 00:56:15.051 -07:00 [INF] HTTP POST /api/v1/Auth/login responded 401 in 41.4772 ms
+2025-09-09 00:58:36.383 -07:00 [INF] Login attempt for email: admin@test.com
+2025-09-09 00:58:36.383 -07:00 [INF] Processing login request for email: admin@test.com
+2025-09-09 00:58:36.391 -07:00 [INF] Login successful for email: admin@test.com
+2025-09-09 00:58:36.391 -07:00 [ERR] Error processing login request for email: admin@test.com
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+User -> UserDto
+EMR.Core.Entities.User -> EMR.Application.Commands.Authentication.UserDto
+   at lambda_method1016(Closure, Object, UserDto, ResolutionContext)
+   at EMR.Application.Commands.Authentication.LoginCommandHandler.Handle(LoginCommand request, CancellationToken cancellationToken) in /Users/dang/dev/modern-emr/services/emr-backend/src/EMR.Application/Commands/Authentication/LoginCommandHandler.cs:line 44
+2025-09-09 00:58:36.391 -07:00 [WRN] Login failed for email: admin@test.com
+2025-09-09 00:58:36.392 -07:00 [INF] HTTP POST /api/v1/Auth/login responded 401 in 9.1420 ms
+2025-09-09 00:59:34.173 -07:00 [INF] Database initialized successfully
+2025-09-09 00:59:34.225 -07:00 [INF] Now listening on: http://localhost:5000
+2025-09-09 00:59:34.226 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-09 00:59:34.226 -07:00 [INF] Hosting environment: Development
+2025-09-09 00:59:34.226 -07:00 [INF] Content root path: /Users/dang/dev/modern-emr/services/emr-backend/src/EMR.API
+2025-09-09 00:59:50.259 -07:00 [WRN] Failed to determine the https port for redirect.
+2025-09-09 00:59:50.312 -07:00 [INF] Login attempt for email: admin@test.com
+2025-09-09 00:59:50.354 -07:00 [INF] Processing login request for email: admin@test.com
+2025-09-09 00:59:50.664 -07:00 [INF] Login successful for email: admin@test.com
+2025-09-09 00:59:50.668 -07:00 [INF] Login successful for email: admin@test.com
+2025-09-09 00:59:50.686 -07:00 [INF] HTTP POST /api/v1/Auth/login responded 200 in 427.4099 ms
+2025-09-09 01:04:52.770 -07:00 [INF] HTTP GET /Patients responded 404 in 1.0306 ms
