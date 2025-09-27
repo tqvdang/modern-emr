@@ -79,7 +79,7 @@ export default function AdminDashboard() {
           id: apiUser.id,
           name: `${apiUser.firstName} ${apiUser.lastName}`,
           email: apiUser.email,
-          role: apiUser.role || apiUser.userType || 'Staff',
+          role: apiUser.role || 'Staff',
           status: apiUser.status,
           lastLogin: new Date().toISOString().slice(0, 16).replace('T', ' '), // Mock last login
         }));

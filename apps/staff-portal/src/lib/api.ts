@@ -52,6 +52,26 @@ export interface CreateAppointmentRequest {
   description?: string;
 }
 
+export interface Provider {
+  id: number;
+  uuid: string;
+  firstName: string;
+  lastName: string;
+  title?: string;
+  specialization?: string;
+  email?: string;
+  phone?: string;
+  status: string;
+}
+
+export interface AvailableTimeSlot {
+  id: string;
+  startDateTime: string;
+  endDateTime: string;
+  duration: number;
+  available: boolean;
+}
+
 class ApiClient {
   private async request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
     const url = `${API_BASE_URL}${endpoint}`;

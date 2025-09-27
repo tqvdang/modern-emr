@@ -1,0 +1,95 @@
+{
+  "app": {
+    "title": "Bảng Điều Khiển Quản Trị EMR",
+    "subtitle": "Quản Trị Hệ Thống"
+  },
+  "navigation": {
+    "dashboard": "Bảng Điều Khiển",
+    "users": "Người Dùng",
+    "system": "Hệ Thống",
+    "security": "Bảo Mật",
+    "settings": "Cài Đặt",
+    "logout": "Đăng Xuất"
+  },
+  "auth": {
+    "login": "Đăng Nhập",
+    "logout": "Đăng Xuất",
+    "email": "Email",
+    "password": "Mật Khẩu",
+    "loginButton": "Đăng Nhập",
+    "loginError": "Email hoặc mật khẩu không đúng",
+    "welcomeBack": "Chào mừng trở lại",
+    "adminAccess": "Yêu Cầu Quyền Quản Trị"
+  },
+  "dashboard": {
+    "systemOverview": "Tổng Quan Hệ Thống",
+    "userManagement": "Quản Lý Người Dùng",
+    "systemMonitoring": "Giám Sát Hệ Thống",
+    "securityAlerts": "Cảnh Báo Bảo Mật",
+    "totalUsers": "Tổng Người Dùng",
+    "activeUsers": "Người Dùng Hoạt Động",
+    "systemHealth": "Tình Trạng Hệ Thống",
+    "recentActivity": "Hoạt Động Gần Đây"
+  },
+  "users": {
+    "title": "Quản Lý Người Dùng",
+    "addUser": "Thêm Người Dùng",
+    "editUser": "Sửa Người Dùng",
+    "deleteUser": "Xóa Người Dùng",
+    "name": "Tên",
+    "email": "Email",
+    "role": "Vai Trò",
+    "status": "Trạng Thái",
+    "lastLogin": "Lần Đăng Nhập Cuối",
+    "actions": "Hành Động",
+    "active": "Hoạt Động",
+    "inactive": "Không Hoạt Động",
+    "admin": "Quản Trị",
+    "staff": "Nhân Viên",
+    "patient": "Bệnh Nhân"
+  },
+  "system": {
+    "monitoring": "Giám Sát Hệ Thống",
+    "configuration": "Cấu Hình",
+    "maintenance": "Bảo Trì",
+    "backups": "Sao Lưu",
+    "performance": "Hiệu Suất",
+    "uptime": "Thời Gian Hoạt Động",
+    "cpuUsage": "Sử Dụng CPU",
+    "memoryUsage": "Sử Dụng Bộ Nhớ",
+    "diskSpace": "Dung Lượng Đĩa"
+  },
+  "security": {
+    "title": "Bảo Mật",
+    "auditLogs": "Nhật Ký Kiểm Tra",
+    "accessControl": "Kiểm Soát Truy Cập",
+    "alerts": "Cảnh Báo Bảo Mật",
+    "permissions": "Quyền Hạn",
+    "threatDetection": "Phát Hiện Mối Đe Dọa",
+    "loginAttempts": "Lần Thử Đăng Nhập",
+    "suspicious": "Hoạt Động Đáng Ngờ"
+  },
+  "common": {
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "edit": "Sửa",
+    "view": "Xem",
+    "search": "Tìm Kiếm",
+    "filter": "Lọc",
+    "loading": "Đang tải...",
+    "error": "Lỗi",
+    "success": "Thành Công",
+    "warning": "Cảnh Báo",
+    "info": "Thông Tin",
+    "yes": "Có",
+    "no": "Không",
+    "confirm": "Xác Nhận",
+    "close": "Đóng"
+  },
+  "language": {
+    "english": "English",
+    "vietnamese": "Tiếng Việt",
+    "selectLanguage": "Chọn Ngôn Ngữ"
+  }
+}

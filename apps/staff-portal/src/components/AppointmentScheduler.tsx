@@ -25,23 +25,73 @@ export default function AppointmentScheduler({
   const [availableSlots, setAvailableSlots] = useState<AvailableTimeSlot[]>([]);
   const [selectedSlot, setSelectedSlot] = useState<AvailableTimeSlot | null>(null);
   
-  const { 
-    createAppointment, 
-    bookingLoading, 
-    providers, 
-    fetchProviders,
-    fetchAvailableSlots 
-  } = useAppointments();
+  const { createAppointment } = useAppointments();
+  const [bookingLoading, setBookingLoading] = useState(false);
+  const [providers, setProviders] = useState<Provider[]>([]);
+
+  const fetchProviders = async () => {
+    // Mock providers data - replace with actual API call
+    setProviders([
+      {
+        id: 1,
+        uuid: 'provider-1',
+        firstName: 'Dr. Sarah',
+        lastName: 'Johnson',
+        title: 'Physical Therapist',
+        specialization: 'Orthopedic PT',
+        email: 'sarah.johnson@clinic.com',
+        status: 'Active'
+      },
+      {
+        id: 2,
+        uuid: 'provider-2',
+        firstName: 'Dr. Michael',
+        lastName: 'Chen',
+        title: 'Physical Therapist',
+        specialization: 'Sports Medicine',
+        email: 'michael.chen@clinic.com',
+        status: 'Active'
+      }
+    ]);
+  };
+
+  const fetchAvailableSlots = async (providerId: number, date: string, appointmentType: string) => {
+    // Mock available slots - replace with actual API call
+    const mockSlots: AvailableTimeSlot[] = [
+      {
+        id: 'slot-1',
+        startDateTime: `${date}T09:00:00Z`,
+        endDateTime: `${date}T10:00:00Z`,
+        duration: 60,
+        available: true
+      },
+      {
+        id: 'slot-2',
+        startDateTime: `${date}T10:30:00Z`,
+        endDateTime: `${date}T11:30:00Z`,
+        duration: 60,
+        available: true
+      },
+      {
+        id: 'slot-3',
+        startDateTime: `${date}T14:00:00Z`,
+        endDateTime: `${date}T15:00:00Z`,
+        duration: 60,
+        available: true
+      }
+    ];
+    setAvailableSlots(mockSlots);
+  };
 
   useEffect(() => {
     fetchProviders();
-  }, [fetchProviders]);
+  }, []);
 
   useEffect(() => {
     if (selectedDate && selectedProvider && formData.appointmentType) {
       fetchAvailableSlots(selectedProvider.id, selectedDate, formData.appointmentType);
     }
-  }, [selectedDate, selectedProvider, formData.appointmentType, fetchAvailableSlots]);
+  }, [selectedDate, selectedProvider, formData.appointmentType]);
 
   const appointmentTypes = [
     'Initial Evaluation',
@@ -81,7 +131,7 @@ export default function AppointmentScheduler({
       ...prev,
       startDateTime: slot.startDateTime,
       endDateTime: slot.endDateTime,
-      providerId: slot.providerId,
+      providerId: selectedProvider?.id || 0,
     }));
   };
 
@@ -296,27 +346,11 @@ export default function AppointmentScheduler({
                           {provider.firstName} {provider.lastName}
                         </h5>
                         <p className="text-sm text-gray-600">{provider.specialization}</p>
-                        {provider.credentials && (
-                          <p className="text-xs text-gray-500 mt-1">
-                            {provider.credentials.join(', ')}
-                          </p>
-                        )}
+                        {/* Credentials display - not available in current Provider interface */}
                       </div>
-                      {provider.rating && (
-                        <div className="text-right">
-                          <div className="flex items-center text-sm">
-                            <span className="text-yellow-400">★</span>
-                            <span className="ml-1 text-gray-600">{provider.rating}</span>
-                          </div>
-                          <p className="text-xs text-gray-500">
-                            ({provider.reviewCount} reviews)
-                          </p>
-                        </div>
-                      )}
+                      {/* Rating display - not available in current Provider interface */}
                     </div>
-                    {provider.bio && (
-                      <p className="text-sm text-gray-600 mt-2">{provider.bio}</p>
-                    )}
+                    {/* Bio display - not available in current Provider interface */}
                   </div>
                 ))}
               </div>
@@ -346,7 +380,7 @@ export default function AppointmentScheduler({
                       >
                         <div className="font-medium">{time}</div>
                         <div className="text-xs text-gray-500 mt-1">
-                          {slot.appointmentType}
+                          {formData.appointmentType}
                         </div>
                       </button>
                     );
